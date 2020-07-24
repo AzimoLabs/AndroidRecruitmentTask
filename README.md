@@ -1,4 +1,4 @@
-# Internship task
+# Android recruitment task
 The goal of this programming task is to check how comfortable you are with Android code. Please keep in mind that this is not only for us to review your experience and skills, but also for you. We firmly believe that the ability to create described application will be useful when looking for a future job as an Android developer.
 
 Code which you will create covers some skills which are useful in mobile software developer:
