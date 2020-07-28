@@ -19,7 +19,7 @@ During the review process, **we won’t pay much attention to UI/UX** (until you
 
 If you don’t want to share your code publicly, send us the entire project as a zip file via email.
 
-Feel free to ask any questions at jakub.kwiatek@azimo.com.
+Feel free to ask any questions at android_team@azimo.com.
 
 # Task
 
