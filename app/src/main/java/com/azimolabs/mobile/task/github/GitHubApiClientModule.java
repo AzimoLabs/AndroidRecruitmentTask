@@ -14,6 +14,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class GitHubApiClientModule {
 
     //TODO: Initialize Api interface
+    @Provides
+    public GithubApi gitHubApi(Retrofit retrofit){
+        return retrofit.create(GithubApi.class);
+    }
 
     @Provides
     public Retrofit retrofit(OkHttpClient okHttpClient, GsonConverterFactory gsonConverterFactory) {
