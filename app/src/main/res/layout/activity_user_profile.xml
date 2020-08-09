@@ -1,63 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".main.UserProfileActivity">
 
     <ProgressBar
         android:id="@+id/pbLoadingRepos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:visibility="invisible"
         tools:visibility="visible" />
 
     <LinearLayout
         android:id="@+id/llUserDetails"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="18dp"
-        android:layout_marginStart="18dp"
-        android:orientation="horizontal">
+        android:layout_gravity="top|center_horizontal"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvUserName"
+            android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvCompany"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvLocation"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvFollowers"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvFollowing"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvRepoList"
+            android:scrollbars="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvUserRepoError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:text="@string/user_has_no_repositories"
+            android:textColor="@color/error"
+            android:textSize="25sp"
+            android:visibility="invisible"
+            tools:visibility="visible" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tvUserError"
+        android:id="@+id/tvUserDetailsError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="42dp"
+        android:layout_gravity="center"
         android:text="@string/user_doesn_t_exist"
         android:textColor="@color/error"
-        android:textSize="12sp"
+        android:textSize="25sp"
         android:visibility="invisible"
         tools:visibility="visible" />
 
-</LinearLayout>
+</FrameLayout>
