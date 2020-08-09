@@ -9,4 +9,5 @@
     <color name="repo_name">#0366d6</color>
     <color name="error">#F00</color>
     <color name="separation_line">#E0E0E0</color>
+    <color name="colorPrimaryText">#FFF</color>
 </resources>

@@ -3,6 +3,7 @@ package com.azimolabs.mobile.task.main;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -116,6 +117,7 @@ public class UserProfileActivity extends BaseActivity {
     public void showUserRepoDetails(List<Repository> userRepoList) {
         RepoListAdapter adapter = new RepoListAdapter(userRepoList);
         rvRepoList.setAdapter(adapter);
+        rvRepoList.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         rvRepoList.setLayoutManager(new LinearLayoutManager(this));
         hideLoading();
     }

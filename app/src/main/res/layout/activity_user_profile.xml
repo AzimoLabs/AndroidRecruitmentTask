@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="76dp"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimaryText"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
                 android:layout_below="@+id/tvUserName"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimaryText"
                 android:textSize="14sp" />
 
             <TextView
@@ -60,7 +60,7 @@
                 android:layout_below="@+id/tvUserDetails"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="2dp"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimaryText"
                 android:textSize="14sp" />
         </RelativeLayout>
 
