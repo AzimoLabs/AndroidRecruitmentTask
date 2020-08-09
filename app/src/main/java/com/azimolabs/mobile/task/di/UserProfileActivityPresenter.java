@@ -1,9 +1,11 @@
-package com.azimolabs.mobile.task.main;
+package com.azimolabs.mobile.task.di;
 
 import com.azimolabs.mobile.task.base.BasePresenter;
+import com.azimolabs.mobile.task.main.UserFieldErrorDisposer;
 import com.azimolabs.mobile.task.model.Repository;
 import com.azimolabs.mobile.task.model.User;
 import com.azimolabs.mobile.task.model.UserDetailsDownloader;
+import com.azimolabs.mobile.task.view.UserProfileActivity;
 
 import java.util.List;
 

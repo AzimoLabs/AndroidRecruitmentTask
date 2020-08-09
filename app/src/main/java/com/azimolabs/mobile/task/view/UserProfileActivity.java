@@ -1,4 +1,4 @@
-package com.azimolabs.mobile.task.main;
+package com.azimolabs.mobile.task.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +19,9 @@ import com.azimolabs.mobile.task.R;
 import com.azimolabs.mobile.task.base.BaseActivity;
 import com.azimolabs.mobile.task.base.BasePresenter;
 import com.azimolabs.mobile.task.github.ActivityComponent;
+import com.azimolabs.mobile.task.main.UserFieldError;
+import com.azimolabs.mobile.task.di.UserProfileActivityComponent;
+import com.azimolabs.mobile.task.di.UserProfileActivityPresenter;
 import com.azimolabs.mobile.task.model.Repository;
 import com.azimolabs.mobile.task.model.User;
 import com.azimolabs.mobile.task.utils.ErrorType;

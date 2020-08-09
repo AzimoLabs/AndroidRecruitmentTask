@@ -1,10 +1,9 @@
 package com.azimolabs.mobile.task.utils;
 
 import android.content.Intent;
-import android.widget.Toast;
 
 import com.azimolabs.mobile.task.base.BaseActivity;
-import com.azimolabs.mobile.task.main.UserProfileActivity;
+import com.azimolabs.mobile.task.view.UserProfileActivity;
 
 import javax.inject.Inject;
 

@@ -1,7 +1,8 @@
-package com.azimolabs.mobile.task.main;
+package com.azimolabs.mobile.task.di;
 
 import com.azimolabs.mobile.task.base.BaseActivityModule;
 import com.azimolabs.mobile.task.github.ActivityComponent;
+import com.azimolabs.mobile.task.view.UserProfileActivity;
 
 import javax.inject.Singleton;
 
