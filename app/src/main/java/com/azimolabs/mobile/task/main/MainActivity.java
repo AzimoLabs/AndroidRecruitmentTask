@@ -22,8 +22,6 @@ import butterknife.OnTextChanged;
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.pbLoadingRepos)
-    ProgressBar pbLoadingRepos;
     @BindView(R.id.etUserName)
     EditText etUserName;
     @BindView(R.id.tvUserError)
@@ -71,14 +69,6 @@ public class MainActivity extends BaseActivity {
     public void hideError() {
         tvUserError.setVisibility(View.INVISIBLE);
         etUserName.getBackground().mutate().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-    }
-
-    public void showLoading() {
-        pbLoadingRepos.setVisibility(View.VISIBLE);
-    }
-
-    public void hideLoading() {
-        pbLoadingRepos.setVisibility(View.INVISIBLE);
     }
 
     public void hideKeyboard() {

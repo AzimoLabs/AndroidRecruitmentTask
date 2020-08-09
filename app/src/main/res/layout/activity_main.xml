@@ -7,13 +7,6 @@
     android:orientation="vertical"
     tools:context=".main.MainActivity">
 
-    <ProgressBar
-        android:id="@+id/pbLoadingRepos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        tools:visibility="visible" />
-
     <LinearLayout
         android:id="@+id/llUserPicker"
         android:layout_width="wrap_content"
