@@ -42,14 +42,10 @@ public class UserProfileActivity extends BaseActivity {
     LinearLayout llUserDetails;
     @BindView(R.id.tvUserName)
     TextView tvUserName;
-    @BindView(R.id.tvCompany)
-    TextView tvCompany;
-    @BindView(R.id.tvLocation)
-    TextView tvLocation;
-    @BindView(R.id.tvFollowers)
-    TextView tvFollowers;
-    @BindView(R.id.tvFollowing)
-    TextView tvFollowing;
+    @BindView(R.id.tvUserDetails)
+    TextView tvUserDetails;
+    @BindView(R.id.tvFollow)
+    TextView tvFollow;
     @BindView(R.id.rvRepoList)
     RecyclerView rvRepoList;
 
@@ -110,10 +106,8 @@ public class UserProfileActivity extends BaseActivity {
 
     public void showUserDetails(User user) {
         tvUserName.setText(user.getName());
-        tvCompany.setText(user.getCompany());
-        tvLocation.setText(user.getLocation());
-        tvFollowers.setText(String.format(getString(R.string.followers_txt), user.getFollowers()));
-        tvFollowing.setText(String.format(getString(R.string.following_txt), user.getFollowing()));
+        tvUserDetails.setText(String.format(getString(R.string.user_details_txt), user.getCompany(), user.getLocation()));
+        tvFollow.setText(String.format(getString(R.string.follow_txt), user.getFollowing(), user.getFollowers()));
         tvUserDetailsError.setVisibility(View.GONE);
         llUserDetails.setVisibility(View.VISIBLE);
         hideLoading();

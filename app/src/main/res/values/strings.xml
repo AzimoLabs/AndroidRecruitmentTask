@@ -9,6 +9,6 @@
     <string name="please_fill_in">Please fill in!</string>
     <string name="user_has_no_repositories">User has no repositories!</string>
     <string name="connection_error">Connection error!</string>
-    <string name="followers_txt">Followers: %d</string>
-    <string name="following_txt">Following: %d</string>
+    <string name="follow_txt">%d followers, %d following</string>
+    <string name="user_details_txt">%s, %s</string>
 </resources>
