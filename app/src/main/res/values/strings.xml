@@ -11,4 +11,5 @@
     <string name="connection_error">Connection error!</string>
     <string name="follow_txt">%d followers, %d following</string>
     <string name="user_details_txt">%s, %s</string>
+    <string name="na_txt">N/A</string>
 </resources>

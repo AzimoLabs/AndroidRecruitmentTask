@@ -50,6 +50,9 @@ public class UserProfileActivity extends BaseActivity {
     @BindView(R.id.rvRepoList)
     RecyclerView rvRepoList;
 
+    private boolean userDetailsLoaded;
+    private boolean userRepoDetailsLoaded;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,12 +64,6 @@ public class UserProfileActivity extends BaseActivity {
         Intent intent = getIntent();
         String userName = intent.getStringExtra("userName");
         presenter.getUserDetails(userName);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
     }
 
     @Override
@@ -93,25 +90,36 @@ public class UserProfileActivity extends BaseActivity {
     }
 
     public void showError(UserFieldError error) {
-        if(error.getType() == ErrorType.UNKNOWN_USER) {
+        if (error.getType() == ErrorType.UNKNOWN_USER) {
             tvUserDetailsError.setText(error.getErrorMessage());
             tvUserDetailsError.setVisibility(View.VISIBLE);
             llUserDetails.setVisibility(View.GONE);
             hideLoading();
-        } else if(error.getType() == ErrorType.NO_REPOSITORIES) {
+        } else if (error.getType() == ErrorType.NO_REPOSITORIES) {
             tvUserRepoError.setText(error.getErrorMessage());
             tvUserRepoError.setVisibility(View.VISIBLE);
             rvRepoList.setVisibility(View.GONE);
+
+            userRepoDetailsLoaded = true;
+            if (userDetailsLoaded && userRepoDetailsLoaded) {
+                hideLoading();
+            }
         }
     }
 
     public void showUserDetails(User user) {
         tvUserName.setText(user.getName());
-        tvUserDetails.setText(String.format(getString(R.string.user_details_txt), user.getCompany(), user.getLocation()));
+        tvUserDetails.setText(String.format(getString(R.string.user_details_txt),
+                user.getCompany() == null ? getString(R.string.na_txt) : user.getCompany(),
+                user.getLocation() == null ? getString(R.string.na_txt) : user.getLocation()));
         tvFollow.setText(String.format(getString(R.string.follow_txt), user.getFollowing(), user.getFollowers()));
         tvUserDetailsError.setVisibility(View.GONE);
         llUserDetails.setVisibility(View.VISIBLE);
-        hideLoading();
+
+        userDetailsLoaded = true;
+        if (userDetailsLoaded && userRepoDetailsLoaded) {
+            hideLoading();
+        }
     }
 
     public void showUserRepoDetails(List<Repository> userRepoList) {
@@ -119,7 +127,11 @@ public class UserProfileActivity extends BaseActivity {
         rvRepoList.setAdapter(adapter);
         rvRepoList.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         rvRepoList.setLayoutManager(new LinearLayoutManager(this));
-        hideLoading();
+
+        userRepoDetailsLoaded = true;
+        if (userDetailsLoaded && userRepoDetailsLoaded) {
+            hideLoading();
+        }
     }
 
     public void showLoading() {
