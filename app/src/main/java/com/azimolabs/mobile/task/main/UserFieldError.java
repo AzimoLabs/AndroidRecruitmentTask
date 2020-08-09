@@ -15,4 +15,8 @@ public class UserFieldError {
     public String getErrorMessage() {
         return errorMessage;
     }
+
+    public ErrorType getType() {
+        return type;
+    }
 }

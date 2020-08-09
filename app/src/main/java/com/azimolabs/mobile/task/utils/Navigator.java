@@ -1,8 +1,9 @@
 package com.azimolabs.mobile.task.utils;
 
-import android.widget.Toast;
+import android.content.Intent;
 
 import com.azimolabs.mobile.task.base.BaseActivity;
+import com.azimolabs.mobile.task.view.UserProfileActivity;
 
 import javax.inject.Inject;
 
@@ -16,7 +17,8 @@ public class Navigator {
     }
 
     public void navigateToUserDetailsActivity(String userName) {
-        //TODO: Navigate to user details screen
-        Toast.makeText(activity, "Here is the place for your solution!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(activity, UserProfileActivity.class);
+        intent.putExtra("userName", userName);
+        activity.startActivity(intent);
     }
 }

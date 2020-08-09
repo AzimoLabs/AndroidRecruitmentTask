@@ -4,9 +4,12 @@
     <string name="issues">Issues</string>
     <string name="stars">Stars</string>
     <string name="forks">Forks</string>
-    <string name="user_doesn_t_exist">User doesn\'t exist!</string>
+    <string name="user_doesn_t_exist">Either user doesn\'t exist or there is a problem with your internet connection! Please try again later.</string>
     <string name="close">Close</string>
     <string name="please_fill_in">Please fill in!</string>
     <string name="user_has_no_repositories">User has no repositories!</string>
     <string name="connection_error">Connection error!</string>
+    <string name="follow_txt">%d followers, %d following</string>
+    <string name="user_details_txt">%s, %s</string>
+    <string name="na_txt">N/A</string>
 </resources>
